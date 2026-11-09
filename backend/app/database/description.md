@@ -1,0 +1,1 @@
+Atribuições: Conexão e as seesões do banco de dados
