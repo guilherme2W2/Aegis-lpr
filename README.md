@@ -1,128 +1,63 @@
-# <h1 allign = "center"> Projeto Integrador </h1>
+# AEGIS-LPR
 
-<!-- <div align = "center">
+Automação de portão por **reconhecimento de placas (LPR)** com controle de acesso por perfis, operando 100% em rede local.
 
-<img src = "" alt = "" height = "230">
+**Stack:** FastAPI · Uvicorn · SQLAlchemy · PyMySQL · python-dotenv · Pydantic · OpenCV · EasyOCR · Ultralytics (YOLO)
 
-</div> -->
+## Requisitos
 
-### Status do Projeto: Em Andamento (3%) 
+- Python 3.10+
+- MySQL 8 (ou MariaDB) — ou SQLite apenas para desenvolvimento
+- Um **modelo YOLO de detecção de placas** (`.pt`) — não incluído no repositório (veja abaixo)
 
-*Última Atualização em 09/11/2026* 
-<br>
+## Instalação
 
-
-## 🗂 Sumário
-
-<!-- - [📝 Descrição do Projeto](https://github.com/Victor-M-S-Rodrigues07/Projeto_Sabor_Express_POO___Projeto_N3-2026#-descri%C3%A7%C3%A3o-do-projeto) -->
-
-*🚧 Em construção 🚧*
-<br>
-
-
-## 📝 Apresentação
-
-*🚧 Em construção 🚧*
-<br>
-
-
-## 🎯 Objetivos do Projeto
-
-*🚧 Em construção 🚧*
-<br>
-
-
-## ⚙ Funcionalidades do Projeto
-
-*🚧 Em construção 🚧*
-<br>
-
-
-## 💻 Tecnologias Utilizadas
-
-![Python](https://img.shields.io/badge/Python-0?style=for-the-badge&logo=python&logoColor=%23FFFFFF&color=%233776AB)
-![Git](https://img.shields.io/badge/Git-0?style=for-the-badge&logo=git&logoColor=%23FFFFFF&color=%23F05032)
-![GitHub](https://img.shields.io/badge/GitHub-0?style=for-the-badge&logo=github&logoColor=%23FFFFFF&color=%23181717) <br>
-<br>
-
-
-## Arquitetura do Back-End
-
-*🚧 Em construção 🚧*
-<br>
-
-
-## 📂 Estrutura das Pastas
-
+```bash
+python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env                                    # e edite os valores
 ```
-/backend
 
-    /app
-        /core
-        /database
-        /models
-        /repositories
-        /routers
-        /schemas
-        /services
-        /tests
+Crie o banco (MySQL):
 
-    /venv
-        /Include
-        /Lib
-        /Scripts
-        pyvenv.cfg
-
-    main.py
-
-
-.gitignore
-README.md
+```sql
+CREATE DATABASE aegis_lpr CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'aegis'@'%' IDENTIFIED BY 'sua-senha';
+GRANT ALL ON aegis_lpr.* TO 'aegis'@'%';
 ```
-<br>
 
-## Requisitos para Instalação
+As tabelas são criadas automaticamente na primeira execução, junto com o **Super ADM** definido em `SUPER_ADMIN_*` no `.env` (troca de senha obrigatória no primeiro login).
 
-*🚧 Em construção 🚧*
-<br>
+> O `.env` que acompanha o projeto usa SQLite e segredos de desenvolvimento. **Gere novos segredos e nunca versione o `.env`.**
 
-## Configuração das Variáveis de Ambiente
+## Executando
 
-*🚧 Em construção 🚧*
-<br>
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000        # em produção: --host <IP da rede interna>, 1 worker
+```
 
-## Configuração do Banco de Dados
+Swagger: http://localhost:8000/docs
 
-*🚧 Em construção 🚧*
-<br>
+## Modelos de IA
 
+- **YOLO**: coloque seus pesos em `modelos/placa.pt` (ou ajuste `YOLO_MODEL_PATH`). É necessário um modelo treinado para detectar placas veiculares.
+- **EasyOCR**: baixa os modelos de inglês na primeira execução. Para operar sem internet, copie a pasta de modelos para `EASYOCR_DIR` e use `EASYOCR_DOWNLOAD=false`.
+- Sem GPU, a leitura roda em CPU (mais lenta). Ative `USAR_GPU=true` se houver CUDA.
 
-## 📥 Acesso ao Projeto
+## Testes
 
-<!-- Para obter uma cópia do projeto em sua máquina, clone este repositório utilizando o Git: -->
-*🚧 Em construção 🚧*
-<br>
+```bash
+pytest -v
+```
 
-## ▶️ Abrir e Executar o Projeto
+Usam SQLite em memória e simulam YOLO/EasyOCR/relé, então não exigem MySQL, GPU nem hardware.
 
-*🚧 Em construção 🚧*
-<br>
+## Documentação
 
-## Documentação dos Endpoints
+- [`docs/arquitetura.md`](docs/arquitetura.md) — camadas, fluxo e decisões de projeto
+- [`docs/controle_acesso.md`](docs/controle_acesso.md) — perfis, ciclo de visitantes, relé e fallback
+- [`docs/endpoints.md`](docs/endpoints.md) — referência da API
 
-*🚧 Em construção 🚧*
-<br>
+## Segurança (resumo)
 
-## Regras de Negócio
-
-*🚧 Em construção 🚧*
-<br>
-
-## Integrantes
-
-*🚧 Em construção 🚧*
-<br>
-
-## 👨🏻‍💻 Contatos & Referências
-
-*🚧 Em construção 🚧*
+Acesso somente pela LAN (`SOMENTE_LAN`), JWT com expiração, senha temporária com troca obrigatória, bloqueio de login por tentativas, CPF mascarado (LGPD), câmera autenticada por chave, relé acionado por pulso (nunca "aberto contínuo") e auditoria completa em `acessos`.
