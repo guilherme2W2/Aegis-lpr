@@ -6,3 +6,5 @@ __pycache__/
 .pytest__cache/
 .idea/
 .vscode/
+*.sql
+

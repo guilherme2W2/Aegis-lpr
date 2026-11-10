@@ -1,0 +1,1 @@
+# Gerenciamento das sessões de acesso

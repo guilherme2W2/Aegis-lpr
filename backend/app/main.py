@@ -15,3 +15,12 @@ def home():
         "mensagem": "Sistema de Controle de Acesso - API de reconhecimento de placas e controle de acesso.",
         "status": "API está funcionando corretamente."
     }
+
+@app.get ("/health")
+
+def health():
+
+    return {
+
+        "status": "healthy"
+    }
