@@ -153,7 +153,7 @@ requirements.txt
 - **Banco de Dados:** MySQL 8 ou MariaDB, conforme a configuração adotada.
 - **Modelo YOLO:** modelo de detecção de placas no formato `.pt`, necessário para o processamento e reconhecimento das imagens. 
 
-> [NOTE!]
+> [!NOTE]
 > O arquivo do YOLO não está incluído diretamente no repositório.
 
 ### 🔹 Dependências da Aplicação
