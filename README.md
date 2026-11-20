@@ -4,13 +4,12 @@
 
 <img src = "imgs\caput-README.png" alt = "" height = "400">
 
-</div>
-
 ### Status do Projeto: Em Andamento (45%) 🚧
 
 *Última Atualização em 20/11/2026*
-<br>
 
+</div>
+<br>
 
 ## 🗂 Sumário
 
@@ -31,7 +30,6 @@ A solução utiliza tecnologias de processamento de imagens e reconhecimento óp
 Além da automatização do processo de identificação, o **AEGIS-LPR** busca proporcionar maior organização administrativa, rastreabilidade das movimentações e centralização das informações, contribuindo para uma gestão mais eficiente do controle de acesso veicular e atendendo às demandas de condomínios e conjuntos habitacionais, especialmente em grandes centros urbanos, como São Paulo.
 
 O nosso projeto integra conhecimentos de **Engenharia da Computação**, especialmente nas áreas de desenvolvimento de software, integração de sistemas, processamento de imagens e gerenciamento de bancos de dados. Sua concepção e desenvolvimento fazem parte das atividades acadêmicas do curso de Bacharelado em Engenharia da Computação, conciliando a aplicação prática dos conhecimentos adquiridos com o desenvolvimento de uma solução tecnológica para um problema real.
-
 <br>
 
 ## 🎯 Objetivos do Projeto
@@ -48,13 +46,16 @@ O nosso projeto integra conhecimentos de **Engenharia da Computação**, especia
 
 ## 💻 Tecnologias Utilizadas
 
-![Python](https://img.shields.io/badge/Python-0?style=for-the-badge&logo=python&logoColor=%23FFFFFF&color=%233776AB)
-![Git](https://img.shields.io/badge/Git-0?style=for-the-badge&logo=git&logoColor=%23FFFFFF&color=%23F05032)
-![GitHub](https://img.shields.io/badge/GitHub-0?style=for-the-badge&logo=github&logoColor=%23FFFFFF&color=%23181717) <br>
+*🚧 Em construção 🚧*
 <br>
 
+<!-- ![Python](https://img.shields.io/badge/Python-0?style=for-the-badge&logo=python&logoColor=%23FFFFFF&color=%233776AB)
+![Git](https://img.shields.io/badge/Git-0?style=for-the-badge&logo=git&logoColor=%23FFFFFF&color=%23F05032)
+![GitHub](https://img.shields.io/badge/GitHub-0?style=for-the-badge&logo=github&logoColor=%23FFFFFF&color=%23181717)
+<br> -->
 
-## Arquitetura do Back-End
+
+## 🔨 Arquitetura do Back-End
 
 *🚧 Em construção 🚧*
 <br>
@@ -142,34 +143,40 @@ requirements.txt
 ```
 <br>
 
-## Requisitos para Instalação
+## 📃 Requisitos para Instalação
 
-- Python 3.10+
-- MySQL 8 (ou MariaDB) — ou SQLite apenas para desenvolvimento
-- Um **modelo YOLO de detecção de placas** (`.pt`) — não incluído no repositório (veja abaixo)
+*Para executar o AEGIS-LPR, é necessário possuir os seguintes recursos e ferramentas instalados:*
 
-# --- API ---
-fastapi>=0.110
-uvicorn[standard]>=0.29
-pydantic>=2.6
+### 🔹 Requisitos de Ambiente
 
-# --- Banco de dados ---
-SQLAlchemy>=2.0
-PyMySQL>=1.1
-cryptography>=42        # exigido pelo PyMySQL para autenticação do MySQL 8 (caching_sha2_password)
+- **Python:** versão 3.10 ou superior.
+- **Banco de Dados:** MySQL 8 ou MariaDB, conforme a configuração adotada.
+- **Modelo YOLO:** modelo de detecção de placas no formato `.pt`, necessário para o processamento e reconhecimento das imagens. 
 
-# --- Configuração ---
-python-dotenv>=1.0
+> [NOTE!]
+> O arquivo do YOLO não está incluído diretamente no repositório.
 
-# --- Visão computacional / LPR ---
-opencv-python>=4.9
-ultralytics>=8.1        # YOLO (instala PyTorch)
-easyocr>=1.7
+### 🔹 Dependências da Aplicação
 
-# --- Testes (desenvolvimento) ---
-pytest>=8.0
-httpx>=0.27             # exigido pelo TestClient do FastAPI
+As bibliotecas utilizadas no desenvolvimento e na execução do backend estão relacionadas no arquivo `requirements.txt`, incluindo:
 
+- **FastAPI:** construção da API.
+- **Uvicorn:** execução do servidor ASGI.
+- **Pydantic:** validação e estruturação dos dados.
+- **SQLAlchemy:** gerenciamento da comunicação com o banco de dados por meio de ORM.
+- **PyMySQL:** conexão com o banco de dados MySQL.
+- **cryptography:** suporte criptográfico para autenticação na conexão com o MySQL.
+- **python-dotenv:** gerenciamento das variáveis de ambiente.
+- **OpenCV:** processamento e manipulação de imagens.
+- **Ultralytics:** execução do modelo YOLO para detecção de placas.
+- **EasyOCR:** reconhecimento óptico dos caracteres das placas.
+
+### 🔹 Dependências de Desenvolvimento e Testes
+
+- **pytest:** execução e gerenciamento dos testes.
+- **httpx:** suporte às requisições HTTP utilizadas nos testes da API.
+
+> A instalação das dependências será realizada conforme as instruções disponíveis na seção Instalação das Dependências.
 <br>
 
 ## Acesso e clonagem do projeto;
@@ -216,6 +223,11 @@ httpx>=0.27             # exigido pelo TestClient do FastAPI
 *🚧 Em construção 🚧*
 <br>
 
+## Licença
+
+*🚧 Em construção 🚧*
+<br>
+
 ## Integrantes
 
 *🚧 Em construção 🚧*
@@ -225,15 +237,7 @@ httpx>=0.27             # exigido pelo TestClient do FastAPI
 
 *🚧 Em construção 🚧*
 
-## Licença
-
-*🚧 Em construção 🚧*
-<br>
-
 Copyright ©️ 2026 - AEGIS-LPR - BRAZIL
-
-
-
 
 <!-- # AEGIS-LPR
 
