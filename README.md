@@ -4,12 +4,6 @@ Automação de portão por **reconhecimento de placas (LPR)** com controle de ac
 
 **Stack:** FastAPI · Uvicorn · SQLAlchemy · PyMySQL · python-dotenv · Pydantic · OpenCV · EasyOCR · Ultralytics (YOLO)
 
-## Requisitos
-
-- Python 3.10+
-- MySQL 8 (ou MariaDB) — ou SQLite apenas para desenvolvimento
-- Um **modelo YOLO de detecção de placas** (`.pt`) — não incluído no repositório (veja abaixo)
-
 ## Instalação
 
 ```bash
