@@ -6,7 +6,7 @@
 
 ### Status do Projeto: Em Andamento (45%) 🚧
 
-*Última Atualização em 20/11/2026*
+*Última Atualização em 21/11/2026*
 
 </div>
 <br>
@@ -16,6 +16,10 @@
 - [📝 Apresentação](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-apresenta%C3%A7%C3%A3o)
 - [🎯 Objetivos do Projeto](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-objetivos-do-projeto)
 - [⚙ Funcionalidades](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-funcionalidades)
+    - [🚘 Reconhecimento de Placas]()
+    - [👥 Gerenciamento de Usuários e Veículos]()
+    - [🔐 Controle de Acesso e Autenticação]()
+    - [📋 Histórico de Acessos]()
 - [💻 Tecnologias Utilizadas](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-tecnologias-utilizadas)
 - [🔨 Arquitetura do Back-End](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-arquitetura-do-back-end)
 - [📂 Estrutura das Pastas](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-estrutura-das-pastas)
@@ -48,19 +52,59 @@ A solução utiliza tecnologias de processamento de imagens e reconhecimento óp
 Além da automatização do processo de identificação, o **AEGIS-LPR** busca proporcionar maior organização administrativa, rastreabilidade das movimentações e centralização das informações, contribuindo para uma gestão mais eficiente do controle de acesso veicular e atendendo às demandas de condomínios e conjuntos habitacionais, especialmente em grandes centros urbanos, como São Paulo.
 
 O nosso projeto integra conhecimentos de **Engenharia da Computação**, especialmente nas áreas de desenvolvimento de software, integração de sistemas, processamento de imagens e gerenciamento de bancos de dados. Sua concepção e desenvolvimento fazem parte das atividades acadêmicas do curso de Bacharelado em Engenharia da Computação, conciliando a aplicação prática dos conhecimentos adquiridos com o desenvolvimento de uma solução tecnológica para um problema real.
+
+> [!IMPORTANT]
+> Por se tratar de um Projeto de Extensão e Aprendizado, o desenvolvimento da nossa aplicação será realizado de forma gradual, acompanhando a matriz curricular e as etapas previstas na grade do nosso curso. Por isso, cada semestre contemplará o desenvolvimento de uma parte específica do projeto, permitindo a aplicação prática dos conhecimentos adquiridos ao longo da graduação.
+> Neste semestre, os trabalhos foram concentrados na estruturação e no desenvolvimento do Back-End. A conclusão da aplicação está prevista para dezembro de 2028.
 <br>
 
 ## 🎯 Objetivos do Projeto
 
-*🚧 Em construção 🚧*
-<br>
+Este projeto tem por objetivo desenvolver um sistema inteligente de controle e automação para acesso veícular em residências, condomínios e conjuntos habitacionais. Foi utilizadas tecnologias de reconhecimento de placas, processamento de imagens e gerenciamento de bancos de dados. O sistema busca identificar veículos, verificar suas permissões de acesso e registrar suas movimentações, contribuindo para a organização e o gerenciamento. Para a finalidade de gerenciamento e controle, os objetivos foram separados em partes:
 
+- a) Reconhecimento de placas: implementar mecanismos de processamento de imagens e reconhecimento óptico de caracteres (OCR) para identificar placas veiculares; ✔
+- b) Gerenciamento de veículos e usuários: permitir o cadastro, a consulta, a atualização e a exclusão de informações de moradores, funcionários e veículos; ✔
+- c) Validação de acesso: verificar se os veículos identificados possuem autorização para entrar no condomínio, de acordo com os registros cadastrados; ✔
+- d) Registro de movimentações: armazenar informações sobre entradas e saídas, mantendo um histórico de acessos para consultas posteriores; ✔
+- e) Gerenciamento de informações: centralizar os dados de usuários, veículos e movimentações em um banco de dados, garantindo sua organização e disponibilidade; ✔
+- f) Desenvolvimento da API: estruturar uma interface de comunicação entre os componentes do sistema, permitindo a integração dos recursos de reconhecimento, validação e gerenciamento; ✔
+- g) Confiabilidade do sistema: desenvolver e executar testes para verificar o funcionamento dos recursos implementados e a consistência das informações armazenadas. ✔
+<br>
 
 ## ⚙ Funcionalidades
 
-*🚧 Em construção 🚧*
-<br>
+O AEGIS-LPR contará com esse conjunto de funcionalidades voltadas à identificação de veículos, ao gerenciamento de cadastros e ao controle de acesso em condomínios residenciais:
 
+### 🚘 Reconhecimento de Placas
+
+- Identificação das placas veiculares por meio do processamento de imagens;
+- Detecção da região da placa utilizando modelos de visão computacional;
+- Reconhecimento dos caracteres presentes na placa por meio de um OCR.
+
+### 👥 Gerenciamento de Usuários e Veículos
+
+- Cadastro de moradores e funcionários;
+- Cadastro de veículos de diferentes modalidades de acordo com as necessidades de cada condomínio (Modalidade A e B inicialmente);
+- Consulta e visualização dos veículos cadastrados;
+- Atualização e exclusão de registros no histórico;
+- Verificação da situação do veículo e de sua autorização de acesso.
+
+### 🔐 Controle de Acesso e Autenticação
+
+- Validação das placas reconhecidas;
+- Verificação da autorização de entrada do veículo;
+- Registro das tentativas de acesso, conforme o resultado da validação;
+- Armazenamento das movimentações de entrada e saída;
+- Autenticação de usuários para acesso aos recursos protegidos da API;
+- Validação das informações recebidas pelo sistema.
+
+### 📋 Histórico de Acessos
+
+- Registro de data e horário das movimentações;
+- Consultas aos registros de acesso;
+- Identificação dos veículos envolvidos nas movimentações;
+- Disponibilização do histórico para acompanhamento e gerenciamento;
+<br>
 
 ## 💻 Tecnologias Utilizadas
 
