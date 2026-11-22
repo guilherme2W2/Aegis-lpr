@@ -13,9 +13,27 @@
 
 ## 🗂 Sumário
 
-<!-- - [📝 Descrição do Projeto](https://github.com/Victor-M-S-Rodrigues07/Projeto_Sabor_Express_POO___Projeto_N3-2026#-descri%C3%A7%C3%A3o-do-projeto) -->
-
-*🚧 Em construção 🚧*
+- [📝 Apresentação](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-apresenta%C3%A7%C3%A3o)
+- [🎯 Objetivos do Projeto](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-objetivos-do-projeto)
+- [⚙ Funcionalidades](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-funcionalidades)
+- [💻 Tecnologias Utilizadas](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-tecnologias-utilizadas)
+- [🔨 Arquitetura do Back-End](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-arquitetura-do-back-end)
+- [📂 Estrutura das Pastas](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-estrutura-das-pastas)
+- [📃 Requisitos para Instalação](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-requisitos-para-instala%C3%A7%C3%A3o)
+  - [🔹 Requisitos de Ambiente]()
+  - [🔹 Dependências da Aplicação]()
+  - [🔹 Dependências de Desenvolvimento e Testes]()
+- [🔑 Acesso e clonagem do projeto]()
+- [💻 Criação do ambiente virtual]()
+- [📥 Instalação das dependências]()
+- [⚙ Configuração das Variáveis de Ambiente]()
+- [💾 Configuração do Banco de Dados]()
+- [▶️ Abrir e Executar o Projeto]()
+- [📡 Documentação dos Endpoints]()
+- [📋 Regras de Negócio]()
+- [🗞 Licença]()
+- [👨🏻‍💻 Integrantes]()
+- [✨ Contatos & Referências]()
 <br>
 
 
@@ -38,7 +56,7 @@ O nosso projeto integra conhecimentos de **Engenharia da Computação**, especia
 <br>
 
 
-## ⚙ Funcionalidades do Projeto
+## ⚙ Funcionalidades
 
 *🚧 Em construção 🚧*
 <br>
@@ -179,30 +197,30 @@ As bibliotecas utilizadas no desenvolvimento e na execução do backend estão r
 > A instalação das dependências será realizada conforme as instruções disponíveis na seção Instalação das Dependências.
 <br>
 
-## Acesso e clonagem do projeto;
+## 🔑 Acesso e clonagem do projeto
 
 *🚧 Em construção 🚧*
 <br>
 
 
-## Criação do ambiente virtual;
+## 💻 Criação do ambiente virtual
 
 *🚧 Em construção 🚧*
 <br>
 
 
-## Instalação das dependências;
+## 📥 Instalação das dependências
 
 *🚧 Em construção 🚧*
 <br>
 
 
-## Configuração das Variáveis de Ambiente
+## ⚙ Configuração das Variáveis de Ambiente
 
 *🚧 Em construção 🚧*
 <br>
 
-## Configuração do Banco de Dados
+## 💾 Configuração do Banco de Dados
 
 *🚧 Em construção 🚧*
 <br>
@@ -213,27 +231,27 @@ As bibliotecas utilizadas no desenvolvimento e na execução do backend estão r
 *🚧 Em construção 🚧*
 <br>
 
-## Documentação dos Endpoints
+## 📡 Documentação dos Endpoints
 
 *🚧 Em construção 🚧*
 <br>
 
-## Regras de Negócio
+## 📋 Regras de Negócio
 
 *🚧 Em construção 🚧*
 <br>
 
-## Licença
+## 🗞 Licença
 
 *🚧 Em construção 🚧*
 <br>
 
-## Integrantes
+## 👨🏻‍💻 Integrantes
 
 *🚧 Em construção 🚧*
 <br>
 
-## 👨🏻‍💻 Contatos & Referências
+## ✨ Contatos & Referências
 
 *🚧 Em construção 🚧*
 
