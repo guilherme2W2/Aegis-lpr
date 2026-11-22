@@ -106,22 +106,68 @@ O AEGIS-LPR contará com esse conjunto de funcionalidades voltadas à identifica
 - Disponibilização do histórico para acompanhamento e gerenciamento;
 <br>
 
-## 💻 Tecnologias Utilizadas
+## 💻 Tecnologias 
 
-*🚧 Em construção 🚧*
-<br>
+![Python](https://img.shields.io/badge/Python-0?style=for-the-badge&logo=Python&logoColor=FFFFFF&color=%23387CA6)
+![Fast API](https://img.shields.io/badge/Fast_API-0?style=for-the-badge&logo=FastAPI&logoColor=FFFFFF&color=%23038C7F)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-0?style=for-the-badge&logo=Gunicorn&logoColor=FFFFFF&color=%23030A8C)
+![Pydantic](https://img.shields.io/badge/PyDantic-0?style=for-the-badge&logo=Pydantic&logoColor=FFFFFF&color=%23E72666)
 
-<!-- ![Python](https://img.shields.io/badge/Python-0?style=for-the-badge&logo=python&logoColor=%23FFFFFF&color=%233776AB)
+![MySQL](https://img.shields.io/badge/MySQL-0?style=for-the-badge&logo=MySQL&logoColor=FFFFFF&color=%23D97904)
+![SQL Alchemy](https://img.shields.io/badge/SQL_Alchemy-0?style=for-the-badge&logo=SQLAlchemy&logoColor=FFFFFF&color=%23CA2727)
+![PyMySQL](https://img.shields.io/badge/PyMySQL-0?style=for-the-badge&logo=Python&logoColor=FFFFFF&color=%230A5DA6)
+![.ENV](https://img.shields.io/badge/.ENV-0?style=for-the-badge&logo=.ENV&logoColor=FFFFFF&color=%23F2D544)
+
+![OpenCV](https://img.shields.io/badge/OpenCV-0?style=for-the-badge&logo=OpenCV&logoColor=151515&color=%2398D96A)
+![Ultralytics](https://img.shields.io/badge/Ultralytics-0?style=for-the-badge&logo=Ultralytics&logoColor=FFFFFF&color=%23031EAA)
+![EasyOCR](https://img.shields.io/badge/EasyOCR-0?style=for-the-badge&logoColor=FFFFFF&color=%23F20505)
+
 ![Git](https://img.shields.io/badge/Git-0?style=for-the-badge&logo=git&logoColor=%23FFFFFF&color=%23F05032)
 ![GitHub](https://img.shields.io/badge/GitHub-0?style=for-the-badge&logo=github&logoColor=%23FFFFFF&color=%23181717)
-<br> -->
 
 
 ## 🔨 Arquitetura do Back-End
 
-*🚧 Em construção 🚧*
+<div align = "center">
+    <img src = "imgs\diagrama-da-arquitetura.png" height = "500">
+</div>
 <br>
 
+O Back-End do **AEGIS-LPR** foi estruturado em *Python*, utilizando o framework *FastAPI* para disponibilizar os recursos da aplicação por meio de uma *API REST*. Sua arquitetura organiza os componentes em camadas, separando as responsabilidades de comunicação, validação, processamento das regras de negócio e persistência dos dados.
+
+Essa organização busca facilitar a manutenção do código, a integração entre os módulos e a evolução do projeto ao longo de seu desenvolvimento.
+
+Para mais informações, checar o arquivo ```arquitetura.md``` na pasta *docs*.
+
+### Organização das Camadas
+
+O Back-End está dividido nos seguintes componentes:
+
+- **Core (`core/`):** concentra as configurações gerais da aplicação e os parâmetros necessários para seu funcionamento.
+- **Database (`database/`):** responsável pela configuração da conexão com o banco de dados e pelo gerenciamento das sessões utilizadas pela aplicação.
+- **Models (`models/`):** define as entidades e estruturas que representam os dados armazenados no banco de dados, como usuários, veículos e acessos.
+- **Repositories (`repositories/`):** organiza as operações de consulta, inserção, atualização e exclusão de dados, intermediando a comunicação entre os serviços e a camada da persistência.
+- **Routers (`routers/`):** define os endpoints da API e recebe as requisições do HTTP, encaminhando-as para os componentes responsáveis pelo processamento.
+- **Schemas (`schemas/`):** estabelece os formatos dos dados recebidos e enviados pela API, realizando a sua validação e estruturação.
+- **Services (`services/`):** concentra as regras de negócio e os processos da aplicação, incluindo reconhecimento de placas, validação e controle de acesso.
+- **Utils (`utils/`):** reúne as funções auxiliares e recursos reutilizáveis por diferentes componentes do sistema.
+- **Tests (`tests/`):** contém os testes automatizados utilizados para verificar o comportamento e a confiabilidade dos recursos implementados.
+
+### Fluxo de Funcionamento
+
+De maneira geral, uma requisição à API percorre as seguintes etapas:
+
+1. **Recebimento:** o Router recebe a requisição HTTP por meio de um endpoint.
+2. **Validação:** os Schemas verificam e estruturam os dados recebidos.
+3. **Processamento:** os Services executam as regras de negócio e coordenam as operações necessárias.
+4. **Persistência:** quando necessário, os Repositories e Models participam das operações de consulta ou alteração dos dados no banco.
+5. **Resposta:** o resultado do processamento é devolvido ao cliente por meio da API.
+
+No processo de reconhecimento veicular, os serviços de processamento de imagens integram as tecnologias YOLO e EasyOCR para detectar as placas e reconhecer seus caracteres. As informações identificadas são encaminhadas ao processo de validação de acesso, que consulta os registros do sistema e determina o resultado da verificação.
+
+> [!NOTE]
+> A arquitetura apresentada representa a organização lógica do Back-End. A implementação e a integração dos componentes podem evoluir conforme as etapas acadêmicas previstas para o desenvolvimento do AEGIS-LPR.
+<br>
 
 ## 📂 Estrutura das Pastas
 
@@ -292,7 +338,7 @@ Em seguida, ative o ambiente virtual conforme o seu sistema operacional:
 - Linux / macOS / Git Bash: ```source .venv/bin/activate```.
 <br>
 
-## 📥 Instalação das dependências
+## 📥 Instalação das Dependências
 
 Com o ambiente virtual ativado (observe se no terminal aparece o termo "(venv)" no início do comando), instale as bibliotecas necessárias para executar o projeto através do comando:
 
@@ -314,24 +360,91 @@ O projeto utiliza as variáveis de ambiente para armazenar configurações neces
 
 Após criar o arquivo .env, abra-o e preencha os valores de acordo com as configurações do seu ambiente, especialmente as informações de conexão com o banco de dados.
 
-[!IMPORTANT]
-O arquivo .env contém configurações locais e informações que não devem ser compartilhadas publicamente. NUNCA O TORNE PÚBLICO. Utilize o .env.example para analisar as variáveis necessárias, sem incluir senhas ou credenciais reais.
+> [!IMPORTANT]
+> O arquivo .env contém configurações locais e informações que não devem ser compartilhadas publicamente. NUNCA O TORNE PÚBLICO. Utilize o .env.example para analisar as variáveis necessárias, sem incluir senhas ou credenciais reais.
 <br>
 
 ## 💾 Configuração do Banco de Dados
 
-O nosso sistema utiliza um *banco de dados relacional* para armazenar informações de usuários, veículos e registros de acesso. Para preparar o banco de dados:
+O nosso sistema utiliza um *banco de dados relacional* o **MySQL** para armazenar as informações de usuários, veículos e registros de acesso.. Para configurar o banco de dados, conecte-se ao servidor MySQL e execute os seguintes comandos:
 
-1) Instale e inicie um servidor MySQL 8 ou MariaDB compatível com a configuração adotada pelo projeto;
-2) Crie o banco de dados conforme as instruções de configuração;
-3) Importe o arquivo condominio.sql, disponibilizado no repositório;
-4) Verifique se as credenciais e demais parâmetros de conexão estão corretamente definidos no arquivo ".env".
+```sql
+CREATE DATABASE aegis_lpr
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+CREATE USER 'aegis'@'%' IDENTIFIED BY 'sua-senha';
+
+GRANT ALL ON aegis_lpr.* TO 'aegis'@'%';
+```
+
+**Atenção:** substitue o termo "sua-senha" por uma senha própria e segura.
+
+Após criar o banco e o usuário, configure as informações de conexão correspondentes no arquivo `.env`.
+
+**Inicialização automática:** as tabelas do banco de dados são criadas automaticamente na primeira execução da aplicação. Nesse mesmo processo, também é criado o usuário **Super ADM**, cujas informações iniciais são definidas pelas variáveis `SUPER_ADMIN_*` no arquivo `.env`.
+
+Por motivos de segurança, a troca da senha do Super ADM é obrigatória no primeiro acesso.
+
+> [!IMPORTANT]
+> O arquivo `.env` disponibilizado junto ao projeto utiliza SQLite e contém segredos destinados exclusivamente ao ambiente de desenvolvimento. Para utilizar o MySQL, ajuste as configurações de conexão e gere novos segredos antes de executar a aplicação.
+>
+> Nunca versione ou compartilhe seu arquivo `.env`. Utilize o `.env.example` como referência para configurar seu ambiente local.
 <br>
+
 
 ## ▶️ Abrir e Executar o Projeto
 
-*🚧 Em construção 🚧*
-<br>
+Após concluir a instalação das dependências e a configuração do ambiente, vamos iniciar o AEGIS-LPR.
+
+### 1. Iniciando a Aplicação
+
+Certifique-se de que o ambiente virtual esteja ativado e que as configurações do arquivo do ".env" estejam preenchidas corretamente. Na raiz do diretório `backend`, execute o comando:
+
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+Esse comando fará o servidor ser iniciado na porta `8000`, disponibilizando os recursos da API.
+
+### 2. Acessando a API
+
+Com a aplicação em execução, abra o navegador e acesse as documentações:
+
+- **Documentação interativa (Swagger):** [http://localhost:8000/docs](http://localhost:8000/docs)
+- **Documentação alternativa (ReDoc):** [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
+A interface Swagger permite visualizar os endpoints disponíveis e realizar requisições para testar as funcionalidades da API.
+
+### 3. Configurando os Modelos de Inteligência Artificial
+
+O AEGIS-LPR utiliza modelos de visão computacional e reconhecimento óptico de caracteres para identificar placas veiculares.
+
+**YOLO — Detecção de placas**
+
+- Disponibilize os pesos do modelo treinado para detecção de placas no diretório `modelos/placa.pt`.
+- Caso utilize outro caminho, ajuste a variável `YOLO_MODEL_PATH` no arquivo `.env`.
+- É necessário utilizar um modelo treinado especificamente para detectar placas veiculares.
+
+**EasyOCR — Reconhecimento de caracteres**
+
+- Na primeira execução, o EasyOCR realiza o download dos modelos de reconhecimento necessários para seu funcionamento.
+- Para ambientes sem conexão com a internet, disponibilize os arquivos dos modelos no diretório configurado pela variável `EASYOCR_DIR` e defina `EASYOCR_DOWNLOAD=false` no `.env`.
+
+**Processamento por GPU ou CPU**
+
+- Por padrão, o processamento pode ser realizado pela CPU, embora o reconhecimento de imagens possa apresentar menor desempenho.
+- Caso possua uma GPU compatível com CUDA e o ambiente esteja devidamente configurado, habilite o processamento por GPU utilizando `USAR_GPU=true` no `.env`.
+
+### 4. Executando os Testes
+
+Para verificar o funcionamento dos componentes da aplicação, execute o teste:
+
+```bash
+pytest -v
+```
+
+Os testes automatizados utilizam o SQLite em memória e simulam os componentes YOLO, EasyOCR e relé. Dessa forma, não é necessário possuir um servidor MySQL, GPU ou equipamentos físicos conectados para executá-los.
 
 ## 📡 Documentação dos Endpoints
 
@@ -345,7 +458,7 @@ O nosso sistema utiliza um *banco de dados relacional* para armazenar informaç�
 
 ## 🗞 Licença
 
-*🚧 Em construção 🚧*
+Distributed under the Unlicense License
 <br>
 
 ## 👨🏻‍💻 Integrantes
@@ -363,55 +476,8 @@ Copyright ©️ 2026 - AEGIS-LPR - BRAZIL
 
 Automação de portão por **reconhecimento de placas (LPR)** com controle de acesso por perfis, operando 100% em rede local.
 
-**Stack:** FastAPI · Uvicorn · SQLAlchemy · PyMySQL · python-dotenv · Pydantic · OpenCV · EasyOCR · Ultralytics (YOLO)
 
-## Instalação
 
-```bash
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env                                    # e edite os valores
-```
-
-Crie o banco (MySQL):
-
-```sql
-CREATE DATABASE aegis_lpr CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'aegis'@'%' IDENTIFIED BY 'sua-senha';
-GRANT ALL ON aegis_lpr.* TO 'aegis'@'%';
-```
-
-As tabelas são criadas automaticamente na primeira execução, junto com o **Super ADM** definido em `SUPER_ADMIN_*` no `.env` (troca de senha obrigatória no primeiro login).
-
-> O `.env` que acompanha o projeto usa SQLite e segredos de desenvolvimento. **Gere novos segredos e nunca versione o `.env`.**
-
-## Executando
-
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000        # em produção: --host <IP da rede interna>, 1 worker
-```
-
-Swagger: http://localhost:8000/docs
-
-## Modelos de IA
-
-- **YOLO**: coloque seus pesos em `modelos/placa.pt` (ou ajuste `YOLO_MODEL_PATH`). É necessário um modelo treinado para detectar placas veiculares.
-- **EasyOCR**: baixa os modelos de inglês na primeira execução. Para operar sem internet, copie a pasta de modelos para `EASYOCR_DIR` e use `EASYOCR_DOWNLOAD=false`.
-- Sem GPU, a leitura roda em CPU (mais lenta). Ative `USAR_GPU=true` se houver CUDA.
-
-## Testes
-
-```bash
-pytest -v
-```
-
-Usam SQLite em memória e simulam YOLO/EasyOCR/relé, então não exigem MySQL, GPU nem hardware.
-
-## Documentação
-
-- [`docs/arquitetura.md`](docs/arquitetura.md) — camadas, fluxo e decisões de projeto
-- [`docs/controle_acesso.md`](docs/controle_acesso.md) — perfis, ciclo de visitantes, relé e fallback
-- [`docs/endpoints.md`](docs/endpoints.md) — referência da API
 
 ## Segurança (resumo)
 
