@@ -104,7 +104,7 @@ O AEGIS-LPR contará com esse conjunto de funcionalidades voltadas à identifica
 - Disponibilização do histórico para acompanhamento e gerenciamento;
 <br>
 
-## 💻 Tecnologias 
+## 💻 Tecnologias
 
 ![Python](https://img.shields.io/badge/Python-0?style=for-the-badge&logo=Python&logoColor=FFFFFF&color=%23387CA6)
 ![Fast API](https://img.shields.io/badge/Fast_API-0?style=for-the-badge&logo=FastAPI&logoColor=FFFFFF&color=%23038C7F)
