@@ -2,7 +2,7 @@
 
 <div align = "center">
 
-<img src = "imgs\caput-README.png" alt = "" height = "400">
+<img src = "imgs/caput-README.png" alt = "" height = "400">
 
 ### Status do Projeto: Em Andamento (45%) 🚧
 
@@ -243,11 +243,41 @@ As bibliotecas utilizadas no desenvolvimento e na execução do backend estão r
 
 ## 🔑 Acesso e clonagem do projeto
 
-*🚧 Em construção 🚧*
+O código-fonte do AEGIS-LPR está disponível publicamente neste repositório. Para obter uma cópia local do projeto e acompanhar seu desenvolvimento, siga as instruções abaixo:
+
+### 1) Acessando o Repositório
+
+Acesse o repositório oficial do projeto clicando [aqui](https://github.com/guilherme2W2/Aegis-lpr/tree/main)
+
+### 2) Clonando o Repositório
+
+Com o Git instalado em sua máquina, abra o terminal e execute o comando:
+
+``` bash
+git clone https://github.com/guilherme2W2/Aegis-lpr.git
+```
+
+Esse comando fará o download dos arquivos do repositório para o seu computador.
+
+### 3) Acessando o Diretório
+
+Após a clonagem, entre na pasta do projeto:
+
+```bash
+cd Aegis-lpr
+```
+
+A partir desse diretório, será possível acessar os arquivos, consultar a documentação e prosseguir com a configuração do ambiente de desenvolvimento.
+
+> [!NOTE]
+> Caso não tenha o Git instalado, é possível obter os arquivos diretamente pela opção Code → Download ZIP, disponível na página do repositório. Entretanto, recomenda-se utilizar o Git por facilitar a atualização do código-fonte e o acompanhamento das alterações. A imagem abaixo ilustra o processo:
+
+<div align = "center">
+    <img src = "*/imgs/instrucao-de-instalacao.png" alt = "Print de tela mostrando o botão verde escrito 'Code' e as opções de download e clonagem do repositório">
+</div>
 <br>
 
-
-## 💻 Criação do ambiente virtual
+## ⚙ Instalação e Configuração do Ambiente
 
 *🚧 Em construção 🚧*
 <br>
