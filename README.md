@@ -33,8 +33,6 @@
 - [⚙ Configuração das Variáveis de Ambiente](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-configura%C3%A7%C3%A3o-das-vari%C3%A1veis-de-ambiente)
 - [💾 Configuração do Banco de Dados](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-configura%C3%A7%C3%A3o-do-banco-de-dados)
 - [▶️ Abrir e Executar o Projeto](https://github.com/guilherme2W2/Aegis-lpr/tree/main#%EF%B8%8F-abrir-e-executar-o-projeto)
-- [📡 Documentação dos Endpoints](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-documenta%C3%A7%C3%A3o-dos-endpoints)
-- [📋 Regras de Negócio](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-regras-de-neg%C3%B3cio)
 - [🗞 Licença](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-licen%C3%A7a)
 - [👨🏻‍💻 Integrantes](https://github.com/guilherme2W2/Aegis-lpr/tree/main#%E2%80%8D-integrantes)
 - [✨ Contatos & Referências](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-contatos--refer%C3%AAncias)
@@ -445,15 +443,6 @@ pytest -v
 ```
 
 Os testes automatizados utilizam o SQLite em memória e simulam os componentes YOLO, EasyOCR e relé. Dessa forma, não é necessário possuir um servidor MySQL, GPU ou equipamentos físicos conectados para executá-los.
-
-## 📡 Documentação dos Endpoints
-
-*🚧 Em construção 🚧*
-<br>
-
-## 📋 Regras de Negócio
-
-*🚧 Em construção 🚧*
 <br>
 
 ## 🗞 Licença
@@ -471,14 +460,3 @@ Distributed under the Unlicense License
 *🚧 Em construção 🚧*
 
 Copyright ©️ 2026 - AEGIS-LPR - BRAZIL
-
-<!-- # AEGIS-LPR
-
-Automação de portão por **reconhecimento de placas (LPR)** com controle de acesso por perfis, operando 100% em rede local.
-
-
-
-
-## Segurança (resumo)
-
-Acesso somente pela LAN (`SOMENTE_LAN`), JWT com expiração, senha temporária com troca obrigatória, bloqueio de login por tentativas, CPF mascarado (LGPD), câmera autenticada por chave, relé acionado por pulso (nunca "aberto contínuo") e auditoria completa em `acessos`. -->
