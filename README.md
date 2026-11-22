@@ -279,26 +279,54 @@ A partir desse diretório, será possível acessar os arquivos, consultar a docu
 
 ## 💻 Instalação e Configuração do Ambiente
 
-*🚧 Em construção 🚧*
-<br>
+O ambiente virtual permite isolar as dependências do projeto, evitando conflitos com outras instalações do Python ou bibliotecas externas. Para criá-lo na raiz do projeto (É necessário ter o Python instalado), execute o comando:
 
+```bash
+python -m venv venv
+```
+
+Em seguida, ative o ambiente virtual conforme o seu sistema operacional:
+
+- Windows (PowerShell): ```.venv\Scripts\Activate.ps1```;
+- Windows (Prompt de Comando): ```.venv\Scripts\activate.bat```;
+- Linux / macOS / Git Bash: ```source .venv/bin/activate```.
+<br>
 
 ## 📥 Instalação das dependências
 
-*🚧 Em construção 🚧*
-<br>
+Com o ambiente virtual ativado (observe se no terminal aparece o termo "(venv)" no início do comando), instale as bibliotecas necessárias para executar o projeto através do comando:
 
+```cmd
+pip install -r requirements.txt
+```
+
+Isso permitirá que o PIP instale automaticamente todas as bibliotecas e módulos necessários, já com as versões corretas. 
+
+Cada uma das dependências e as suas respectivas finalidades estão descritas na seção [Requisitos para Instalação](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-requisitos-para-instala%C3%A7%C3%A3o))
+<br>
 
 ## ⚙ Configuração das Variáveis de Ambiente
 
-*🚧 Em construção 🚧*
+O projeto utiliza as variáveis de ambiente para armazenar configurações necessárias à execução da aplicação. Crie uma cópia do arquivo ".env.example", utilizando-a como base para configurar o ambiente local.
+
+- Windows (PowerShell): ```Copy-Item .env.example .env```;
+- Linux / macOS / Git Bash: ```cp .env.example .env```.
+
+Após criar o arquivo .env, abra-o e preencha os valores de acordo com as configurações do seu ambiente, especialmente as informações de conexão com o banco de dados.
+
+[!IMPORTANT]
+O arquivo .env contém configurações locais e informações que não devem ser compartilhadas publicamente. NUNCA O TORNE PÚBLICO. Utilize o .env.example para analisar as variáveis necessárias, sem incluir senhas ou credenciais reais.
 <br>
 
 ## 💾 Configuração do Banco de Dados
 
-*🚧 Em construção 🚧*
-<br>
+O nosso sistema utiliza um *banco de dados relacional* para armazenar informações de usuários, veículos e registros de acesso. Para preparar o banco de dados:
 
+1) Instale e inicie um servidor MySQL 8 ou MariaDB compatível com a configuração adotada pelo projeto;
+2) Crie o banco de dados conforme as instruções de configuração;
+3) Importe o arquivo condominio.sql, disponibilizado no repositório;
+4) Verifique se as credenciais e demais parâmetros de conexão estão corretamente definidos no arquivo ".env".
+<br>
 
 ## ▶️ Abrir e Executar o Projeto
 
