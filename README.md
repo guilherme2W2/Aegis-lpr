@@ -28,7 +28,7 @@
   - [🔹 Dependências da Aplicação](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-depend%C3%AAncias-da-aplica%C3%A7%C3%A3o)
   - [🔹 Dependências de Desenvolvimento e Testes](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-depend%C3%AAncias-de-desenvolvimento-e-testes)
 - [🔑 Acesso e Clonagem do Projeto](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-acesso-e-clonagem-do-projeto)
-- [💻 Criação do Ambiente Virtual](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-cria%C3%A7%C3%A3o-do-ambiente-virtual)
+- [💻 Instalação e Configuração do Ambiente](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-instala%C3%A7%C3%A3o-e-configura%C3%A7%C3%A3o-do-ambiente)
 - [📥 Instalação das Dependências](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-instala%C3%A7%C3%A3o-das-depend%C3%AAncias)
 - [⚙ Configuração das Variáveis de Ambiente](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-configura%C3%A7%C3%A3o-das-vari%C3%A1veis-de-ambiente)
 - [💾 Configuração do Banco de Dados](https://github.com/guilherme2W2/Aegis-lpr/tree/main#-configura%C3%A7%C3%A3o-do-banco-de-dados)
@@ -273,11 +273,11 @@ A partir desse diretório, será possível acessar os arquivos, consultar a docu
 > Caso não tenha o Git instalado, é possível obter os arquivos diretamente pela opção Code → Download ZIP, disponível na página do repositório. Entretanto, recomenda-se utilizar o Git por facilitar a atualização do código-fonte e o acompanhamento das alterações. A imagem abaixo ilustra o processo:
 
 <div align = "center">
-    <img src = "*/imgs/instrucao-de-instalacao.png" alt = "Print de tela mostrando o botão verde escrito 'Code' e as opções de download e clonagem do repositório">
+    <img src = "imgs/instrucao-de-instalacao.png" alt = "Print de tela mostrando o botão verde escrito 'Code' e as opções de download e clonagem do repositório">
 </div>
 <br>
 
-## ⚙ Instalação e Configuração do Ambiente
+## 💻 Instalação e Configuração do Ambiente
 
 *🚧 Em construção 🚧*
 <br>
